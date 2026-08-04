@@ -38,7 +38,7 @@ description: >-
 
   components that have embedded icons (the drop-down selects, for example).
 
-  A PostCSS plugin for processing the icons can be [found in the Design System project](https://github.com/cfpb/design-system/blob/main/postcss/plugins/process-icons.js).
+  A PostCSS plugin for processing the icons can be [found in the Design System project](https://github.com/cfpb/design-system/blob/main/scripts/process-icons.js).
 
 
   ## Installing components in your project
