@@ -40,7 +40,7 @@ here's what you'd do:
 1. Copy `/packages/cfpb-design-system/` into `node_modules/@cfpb/cfpb-design-system/` in your consumerfinance.gov or other repo.
 1. `cd ~/wherever/consumerfinance.gov/` to navigate to another project where you'd like to test your buttons changes (in this case, consumerfinance.gov).
 1. `yarn build` in consumerfinance.gov to compile your stylesheets.
-1. [Start consumerfinance.gov](https://cfpb.github.io/consumerfinance.gov/usage/) and navigate to a page with buttons to view your `@cfpb/cfpb-design-system` changes.
+1. [Start consumerfinance.gov](https://cfpb.github.io/consumerfinance.gov/installation/) and navigate to a page with buttons to view your `@cfpb/cfpb-design-system` changes.
 1. When you're pleased with your changes, `cd` back to your `design-system` repo and commit your changes: `git commit -am "Fix button border radius"`
 1. `git push origin button-fix` to push your branch up to GitHub.
 1. Go to https://github.com/cfpb/design-system and open a pull request to merge `button-fix` into `main`.

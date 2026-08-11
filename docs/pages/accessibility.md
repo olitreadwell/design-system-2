@@ -22,7 +22,7 @@ description: >-
   Note: While this document can function as a checklist – and at times, it will – that isn’t the primary purpose. The goal is to foster understanding of why these guidelines are important.
 
 
-  *This guide is adapted from the [Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/), a [W3C](http://www.w3.org/) Recommendation. [More info](http://cfpb.github.io/design-manual/best-practices/accessibility-best-practices.html#attribution).*
+  *This guide is adapted from the [Web Content Accessibility Guidelines 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/), a [W3C](http://www.w3.org/) Recommendation.*
 
 
   ## Perceivable
@@ -162,7 +162,7 @@ description: >-
   ### Avoid interrupting users
 
 
-  * Avoid popups or other modal dialogs that haven not been prompted by explicit user action or are alerting the user about something that is time-sensitive.
+  * Avoid popups or other modal dialogs that haven't been prompted by explicit user action or are alerting the user about something that is time-sensitive.
 
   * Allow users to pause, stop, or hide anything moving, blinking, or scrolling on the screen if the motion lasts longer than 5 seconds.
 
