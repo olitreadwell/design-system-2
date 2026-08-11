@@ -97,7 +97,7 @@ For help filing a complaint about discrimination on the basis of uniformed statu
 the [Veterans’ Employment and Training Service (VETS)](https://www.dol.gov/vets/) at the Department of Labor, the [Merit Systems Protection Board](https://www.mspb.gov/), or the [Office of Special Counsel](https://osc.gov/), depending on the circumstances.
 
 For help filing a complaint about discrimination on the basis of membership in a labor organization,
-you may contact the [Federal Labor Relations Authority](https://flra.gov/) or your union (if applicable).
+you may contact the [Federal Labor Relations Authority](https://www.flra.gov/) or your union (if applicable).
 
 ### Equal employment opportunity policy
 
@@ -107,8 +107,8 @@ For more information about the CFPB’s equal employment opportunity (EEO) polic
 
 The CFPB is greatly appreciative of the multiple sources that we drew from to build this Code of Conduct, including:
 
-- [The Technology Transformation Services (TTS) Code of Conduct](https://18f.gsa.gov/code-of-conduct/)
+- The Technology Transformation Services (TTS) Code of Conduct
 - [The Contributor Covenant](https://www.contributor-covenant.org/)
 - [Code for America Code of Conduct](https://github.com/codeforamerica/codeofconduct)
-- [Ada Initiative: HOWTO design a code of conduct for your community](https://adainitiative.org/2014/02/18/howto-design-a-code-of-conduct-for-your-community/)
+- Ada Initiative: HOWTO design a code of conduct for your community
 - [Geek Feminism Code of Conduct](https://geekfeminismdotorg.wordpress.com/about/code-of-conduct/)

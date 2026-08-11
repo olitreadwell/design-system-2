@@ -74,7 +74,7 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbButtonProps>(
 
 `excludeCategories: ['methods']` is used in every story file. It drops public methods from the args/controls table since methods aren't bindable Storybook controls.
 
-`setStorybookHlpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
+`setStorybookHelpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
 
 3. ### JSDoc - what works and what doesn't
 
@@ -177,17 +177,17 @@ argTypes {
 }
 ```
 
-If a component reflects a boolean attribute (`reflect: true`), prefer testing/asserting against the DOM attribute in play functions. There is an example of this in `packages/cfpb-design-system/src/elements/cfpb-button/cfpb-button.stories.ts` under `CollapseProgramatically`. We check `button.getAttribute(aria-expanded)`, not a JS property to assert real rendered state.
+If a component reflects a boolean attribute (`reflect: true`), prefer testing/asserting against the DOM attribute in play functions. There is an example of this in `packages/cfpb-design-system/src/elements/cfpb-button/cfpb-button.stories.ts` under `CollapseProgrammatically`. We check `button.getAttribute(aria-expanded)`, not a JS property to assert real rendered state.
 
 This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelCase keys here (`iconLeft, iconRight`) which silently failed to attach the icon-select controls to the real args since `getStorybookHelpers` generates attribute-cased keys.
 
 5. ### Walkthrough of how the 4 example stories differ
 
 - `cfpb-button.stories.ts` is the fullest example. It uses the helper generated `template(args)` directly as `render` (no custom markup needed since the button has a default slot). Adds a `default-slot` pseudo-arg for the slotted button label `getStorybookHelpers` derives this arg automatically from the manifest's unnamed slot entry (`slots: [{ name: '', description: '...'}]`) and the story just seeds a default value for it:
-  `args: { ...args, variant: 'primary', 'deafault-slot': 'Button label' },`
+  `args: { ...args, variant: 'primary', 'default-slot': 'Button label' },`
   It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames and includes two intentionally invalid stories (`InvalidVariant`, `InvalidType`) tagged `['!dev','!autodocs']`. These exist to be picked up by the Vitest/Storybook test runner and verify that invalid values fall back gracefully without cluttering the storybook UI (sidebar/docs).
 
-- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates the `play` functions exercising the component's 4 custom events using `fn()` spies from the `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS-transition-driven `collapsend`/`expandend` events because the component's internal BaseTransition listens for the Chromium-prefixed name first. `CollapseProgramatically` shows testing an imperative property write.
+- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates the `play` functions exercising the component's 4 custom events using `fn()` spies from the `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS-transition-driven `collapsend`/`expandend` events because the component's internal BaseTransition listens for the Chromium-prefixed name first. `CollapseProgrammatically` shows testing an imperative property write.
 
   It writes a custom `render:` like this:
 
@@ -209,7 +209,7 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
 - Import `Meta/StoryObj` from `@storybook/web-components`
 - Call `<Component>.init()` at module scope before anything else
 - Call `getStorybookHelpers<xProps>('tag-name', { excludeCategories: ['methods'] })`, importing the `XProps` type from the `storybook/custom-elements-types`
-- Decide `tempalate(args)` vs custom `render:` use the auto `template` if the component onlhy has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
+- Decide `template(args)` vs custom `render:` use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
 - Set `meta.args/meta.argTypes` using _attribute-cased keys_, not camelCased properties. If you do this wrong it won't error, it just silently no-ops the control or arg
 - Set `meta.component: 'tag-name'` and `tags: ['autodocs]`. This isn't optional. Without `component:` set the auto-generated `Overview` docs page fails to render its canvas and Attributes/Slots/Events table.
 - For components with custom events or imperative methods, add `play` functions using `fn()` + `userEvent` + `expect` from `storybook/test` following the `cfpb-expandable`/`cfpb-tag-filter` pattern. Tag test-only/invalid-input stories `['!dev, !autodocs]` so they run in the test suite but don't clutter the sidebar or docs page.
