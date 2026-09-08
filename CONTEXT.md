@@ -27,4 +27,4 @@
 - `2026-08-05` (design-system-react) Introduction.mdx its->it's — pr-opened-substantive.
 
 ## Mined gaps (discovered, not yet attempted)
-- `2026-09-08` trivial-fix pass: hunt typos / dead links / stale command references / wrong doc lines across whole repo (docs/, README, CONTRIBUTING, STORYBOOK, packages). Pack >=3 genuine fixes into <=10 files. — status: proposed
+- `2026-09-08` trivial-fix pass: hunt typos / dead links / stale command references / wrong doc lines across whole repo (docs/, README, CONTRIBUTING, STORYBOOK, packages). Pack >=3 genuine fixes into <=10 files. — status: skipped (duplicate; parallel worker opened canonical trivial PR #19 oli_fix_docs_links_typos with overlapping seperate->separate + dead-link fixes; my PR #18 closed to avoid bot-sweep footprint)
