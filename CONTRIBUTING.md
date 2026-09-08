@@ -64,7 +64,7 @@ authenticate with Decap CMS.
 
 #### Automated tests
 
-Automated tests can be run with the command `yarn test:browser`.
+Automated tests can be run with the command `yarn test`.
 
 ### Browser support
 
@@ -186,12 +186,12 @@ it found in tokens to the src/elements directory as sub directories.
      "pacific" token and then change its $value: #`newval`.
    - If you wanted to add a color token file for cfpb-newcomponent, you would create `tokens/cfpb-newcomponent` directory and then add the JSON
      token file using the approriate JSON token form.
-1. Then either use `yarn start` to build the cobebase and view it in a browser or `yarn tokens` if you would like to simply create
+1. Then either use `yarn start` to build the codebase and view it in a browser or `yarn tokens` if you would like to simply create
    the .css.
 1. Then the rest of the steps outlined for changing the codebase apply.
    - Open a feature branch for your change
    - Commit the changes
-   - `yarn start` to verify your changes in a browser (for developers or designers who can bulid the project)
+   - `yarn start` to verify your changes in a browser (for developers or designers who can build the project)
    - Open a pull request and ask for a review
 
 ### Our tokens have the following form

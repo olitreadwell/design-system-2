@@ -222,7 +222,7 @@ Auto-generated CEM and `storybook/custom-elements-types.d.ts` get linted as part
 
 8. ### Testing
 
-Each element folder holds three files with seperate jobs:
+Each element folder holds three files with separate jobs:
 
 | File            | Holds                                           | Runs in  |
 | --------------- | ----------------------------------------------- | -------- |
@@ -314,7 +314,7 @@ yarn playwright # run the e2e suite
 yarn playwright open # run it in Playwright's UI mode
 ```
 
-Watch out for the collision. `@playwright/test` is the e2e runner described here. The seperate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
+Watch out for the collision. `@playwright/test` is the e2e runner described here. The separate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
 
 Keep this suite small. A journey you could prove at the component level belongs in `index.spec.js`, where it runs faster and fails more legibly.
 

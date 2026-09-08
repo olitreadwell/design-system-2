@@ -439,7 +439,7 @@ variation_groups:
           ```
 
 
-          Watch out for the collision. `@playwright/test` is the e2e runner described here. The seperate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
+          Watch out for the collision. `@playwright/test` is the e2e runner described here. The separate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
 
 
           Keep this suite small. A journey you could prove at the component level belongs in `index.spec.js`, where it runs faster and fails more legibly.
