@@ -15,7 +15,7 @@ variation_groups:
         variation_description: >-
           * The Design System is a product
 
-          * There are products that use it, of which [www.consumerfinance.gov](www.consumerfinance.gov) is one
+          * There are products that use it, of which [www.consumerfinance.gov](https://www.consumerfinance.gov) is one
 
           * Its documentation applies to all of our current and future products and services
 
@@ -36,7 +36,7 @@ variation_groups:
         variation_name: The Design System should be CMS agnostic
         variation_description: >-
           * We shouldn't include any of
-          [www.consumerfinance.gov](www.consumerfinance.gov) specific code into
+          [www.consumerfinance.gov](https://www.consumerfinance.gov) specific code into
           our Design System code
 
           * Doing so would bake the CMS choice into our design patterns, and we don't want to do that

@@ -73,7 +73,7 @@ we use a 0.2% cutoff with this config for the browsers
 that get fed into our build systems.
 
 What this means to the end-user is we've added a level of backward
-compatability for modern features as much as possible. This doesn't
+compatibility for modern features as much as possible. This doesn't
 necessarily mean feature parity. Where it's impossible or impractical to
 implement a modern feature, we fallback to standard practices for that browser.
 For example, we do not deliver interactive scripting for Internet Explorer 8,

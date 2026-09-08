@@ -74,7 +74,7 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbButtonProps>(
 
 `excludeCategories: ['methods']` is used in every story file. It drops public methods from the args/controls table since methods aren't bindable Storybook controls.
 
-`setStorybookHlpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
+`setStorybookHelpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
 
 3. ### JSDoc - what works and what doesn't
 
@@ -184,10 +184,10 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
 5. ### Walkthrough of how the 4 example stories differ
 
 - `cfpb-button.stories.ts` is the fullest example. It uses the helper generated `template(args)` directly as `render` (no custom markup needed since the button has a default slot). Adds a `default-slot` pseudo-arg for the slotted button label `getStorybookHelpers` derives this arg automatically from the manifest's unnamed slot entry (`slots: [{ name: '', description: '...'}]`) and the story just seeds a default value for it:
-  `args: { ...args, variant: 'primary', 'deafault-slot': 'Button label' },`
+  `args: { ...args, variant: 'primary', 'default-slot': 'Button label' },`
   It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames. It has no `play` functions. The button has no interaction of its own to demonstrate so its whole contract lives in `cfpb-button/index.spec.js`: variant and type fallbacks, the link form, and disabled state.
 
-- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's interanal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is deive by a real click. Programatic property writes moved to `cfpb-expandable/index.spec.js`
+- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programmatic property writes moved to `cfpb-expandable/index.spec.js`
 
   It writes a custom `render:` like this:
 
@@ -199,7 +199,7 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
     </cfpb-expandable>`,
   ```
 
-- `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. It shows the split most clearly. The `Default` story's `play` function clickc the button and asserts `item-click` fires in Chromium, while `cfpb-tag-filter/index.spec.js` covers the event's shape (`detail.target`, `bubbles`, `composed`), the async `focus()` method, the `for` label form, and value derivation from slotted text. Same component, no overlapping assertions.
+- `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. It shows the split most clearly. The `Default` story's `play` function clicks the button and asserts `item-click` fires in Chromium, while `cfpb-tag-filter/index.spec.js` covers the event's shape (`detail.target`, `bubbles`, `composed`), the async `focus()` method, the `for` label form, and value derivation from slotted text. Same component, no overlapping assertions.
 - `cfpb-tagline.stories.ts` - the minimal case. Single boolean property (`isLarge`, no explicit `attribute:` override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.
 
 6. ### Recipe: adding a story for a component
@@ -209,7 +209,7 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
 - Import `Meta/StoryObj` from `@storybook/web-components`
 - Call `<Component>.init()` at module scope before anything else
 - Call `getStorybookHelpers<xProps>('tag-name', { excludeCategories: ['methods'] })`, importing the `XProps` type from the `storybook/custom-elements-types`
-- Decide between `tempalate(args)` and a custom `render:`. Use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
+- Decide between `template(args)` and a custom `render:`. Use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
 - Set `meta.args/meta.argTypes` using _attribute-cased keys_, not camelCased properties. If you do this wrong it won't error, it just silently no-ops the control or arg
 - Set `meta.component: 'tag-name'` and `tags: ['autodocs]`. This isn't optional. Without `component:` set the auto-generated `Overview` docs page fails to render its canvas and Attributes/Slots/Events table.
 - Add a `play` function only for a real user interaction (like a click or keypress) following the `cfpb-expandable/cfpb-tag-filter` pattern with `fn()` + `userEvent` + `expect` from `storybook/test`. Everything else goes in a spec. See section 8.
@@ -222,7 +222,7 @@ Auto-generated CEM and `storybook/custom-elements-types.d.ts` get linted as part
 
 8. ### Testing
 
-Each element folder holds three files with seperate jobs:
+Each element folder holds three files with separate jobs:
 
 | File            | Holds                                           | Runs in  |
 | --------------- | ----------------------------------------------- | -------- |
@@ -314,7 +314,7 @@ yarn playwright # run the e2e suite
 yarn playwright open # run it in Playwright's UI mode
 ```
 
-Watch out for the collision. `@playwright/test` is the e2e runner described here. The seperate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
+Watch out for the collision. `@playwright/test` is the e2e runner described here. The separate `playwright` package is only a browser driver for the `@vitest/browser-playwright`, which launches Chromium for the `storybook` Vitest project. The two have nothing to do with each other.
 
 Keep this suite small. A journey you could prove at the component level belongs in `index.spec.js`, where it runs faster and fails more legibly.
 
