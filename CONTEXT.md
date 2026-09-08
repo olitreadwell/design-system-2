@@ -26,5 +26,7 @@
 - `2026-08-05` self-found docs dead link (process-icons.js moved) — pr-opened-green (fork PR #1, branch docs/fix-process-icons-link-20260804-215245). ~7 other candidate broken links noted for future passes.
 - `2026-08-05` (design-system-react) Introduction.mdx its->it's — pr-opened-substantive.
 
+- `2026-09-09` trivial pass (canonical PR #19 oli_fix_docs_links_typos): 10 genuine fixes across 7 files (4 dead links: process-icons.js, design-manual accessibility, components/elements, cfpb-icons.scss; 3 typos: seperate x3, cobebase, bulid; 1 stale command: yarn test:browser->yarn test) — pr-opened. Fork CI: typecheck/lint/unit-tests green; playwright-run e2e fails to start Storybook webServer in fork env (same on context branch, no code changes) — fork artifact.
 ## Mined gaps (discovered, not yet attempted)
 - `2026-09-08` trivial-fix pass: hunt typos / dead links / stale command references / wrong doc lines across whole repo (docs/, README, CONTRIBUTING, STORYBOOK, packages). Pack >=3 genuine fixes into <=10 files. — status: skipped (duplicate; parallel worker opened canonical trivial PR #19 oli_fix_docs_links_typos with overlapping seperate->separate + dead-link fixes; my PR #18 closed to avoid bot-sweep footprint)
+ (chore: add cfpb/design-system context research branch)
