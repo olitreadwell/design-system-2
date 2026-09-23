@@ -28,6 +28,8 @@
 
 - `2026-09-09` trivial pass: bundled 10 genuine fixes across 7 files (4 dead links: process-icons.js, design-manual accessibility, components/elements, cfpb-icons.scss; 3 typos: seperate x3, cobebase, bulid; 1 stale command: yarn test:browser->yarn test) — pr-opened (fork design-system-2 PR #19, branch oli_fix_docs_links_typos). Fork CI: typecheck/lint/unit-tests green; playwright-run e2e fails to start Storybook webServer in fork env (same on context branch, no code changes) — fork artifact. Parallel worker's overlapping PR #18 closed, #19 kept canonical.
  (Log cfpb/design-system trivial PR #19 outcome)
+- `2026-09-24` trivial pass: bundled 11 typo fixes across 5 files (programatically->programmatically x4 incl. cfpb-expandable test names + both storybook docs, clickc->clicks x2, tempalate->template x2, whenthe->when the, recieves->receives, colums->columns) — pr-opened (fork design-system-2 PR #24, branch oli_fix_docs_test_typos). Fork CI: typecheck/lint/unit-tests/e2e ALL green, mergeable=true. Local: vitest 22 pass for cfpb-button + cfpb-expandable specs; prettier/eslint/stylelint clean. No overlap with PR #19. US dialect respected.
+
 ## Mined gaps (discovered, not yet attempted)
 - `2026-09-08` trivial-fix pass: hunt typos / dead links / stale command references / wrong doc lines across whole repo (docs/, README, CONTRIBUTING, STORYBOOK, packages). Pack >=3 genuine fixes into <=10 files. — status: skipped (duplicate; parallel worker opened canonical trivial PR #19 oli_fix_docs_links_typos with overlapping seperate->separate + dead-link fixes; my PR #18 closed to avoid bot-sweep footprint)
  (chore: add cfpb/design-system context research branch)
