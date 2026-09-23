@@ -37,7 +37,7 @@ describe('<cfpb-button>', () => {
       expect(button.getAttribute('type')).toBe('button');
     });
 
-    it('disables the button whenthe disabled attribute is set', async () => {
+    it('disables the button when the disabled attribute is set', async () => {
       elm = await mountButton({ disabled: '' });
       const button = elm.shadowRoot.querySelector('button');
 

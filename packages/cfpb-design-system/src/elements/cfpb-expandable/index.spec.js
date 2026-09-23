@@ -70,7 +70,7 @@ describe('<cfpb-expandable>', () => {
    * `u-max-height-default` class but never computes and inline max-height.
    * MaxHeightTransition only calls `refersh()` from three spots and none
    * run on an initially open mount and a custom element upgraded after `load`
-   * has already fired never recieves that event at all.
+   * has already fired never receives that event at all.
    *
    * Toggling open after mount goes thorugh `maxHeightDefault()` works which
    * is why this reproduces on initial load.
@@ -84,7 +84,7 @@ describe('<cfpb-expandable>', () => {
   //     expect(content.style.maxHeight).not.toBe('');
   //   });
 
-  describe('collapsing programatically', () => {
+  describe('collapsing programmatically', () => {
     it('collapses when isExpanded is set to false', async () => {
       elm = await mount(true);
       const button = elm.shadowRoot.querySelector('button');
@@ -116,7 +116,7 @@ describe('<cfpb-expandable>', () => {
     });
   });
 
-  describe('expanding programatically', () => {
+  describe('expanding programmatically', () => {
     it('reflects the open attribute when isExpanded is set to true', async () => {
       elm = await mount(false);
 
