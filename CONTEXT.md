@@ -1,5 +1,5 @@
 # cfpb/design-system context
-> refreshed 2026-09-08 | upstream default: main @ 2d78645f9
+> refreshed 2026-09-24 | upstream default: main @ 60a8c6457
 
 ## Identity & policies
 - upstream: cfpb/design-system, default branch `main`, primary language SCSS (JS/TS web components, Jekyll docs site). English-first (yes — all docs/UI in English).
