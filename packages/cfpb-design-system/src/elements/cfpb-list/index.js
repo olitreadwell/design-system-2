@@ -357,7 +357,7 @@ export class CfpbList extends LitElement {
    * @returns {HTMLElement|null} The item node.
    */
   #getLightDomTag(item) {
-    // If node is a wrapped shadow DOM <li>, get the orignal item inside it.
+    // If node is a wrapped shadow DOM <li>, get the original item inside it.
     if (item.tagName === 'LI' && item.shadowRoot) {
       // unlikely scenario if you don't expose shadow nodes externally.
       return item.querySelector('cfpb-tag-filter');
