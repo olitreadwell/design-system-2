@@ -71,6 +71,6 @@ related_items: >-
   * [Labels and
   legends](https://cfpb.github.io/design-system/components/labels-and-legends)
 
-  * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
+  * [Designing forms](https://cfpb.github.io/design-system/guidelines/designing-forms)
 last_updated: 2020-01-28T15:55:47.394Z
 ---
