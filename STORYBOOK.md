@@ -74,7 +74,7 @@ const { args, argTypes, template } = getStorybookHelpers<CfpbButtonProps>(
 
 `excludeCategories: ['methods']` is used in every story file. It drops public methods from the args/controls table since methods aren't bindable Storybook controls.
 
-`setStorybookHlpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
+`setStorybookHelpersConfig({ hideArgRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
 
 3. ### JSDoc - what works and what doesn't
 
@@ -184,10 +184,10 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
 5. ### Walkthrough of how the 4 example stories differ
 
 - `cfpb-button.stories.ts` is the fullest example. It uses the helper generated `template(args)` directly as `render` (no custom markup needed since the button has a default slot). Adds a `default-slot` pseudo-arg for the slotted button label `getStorybookHelpers` derives this arg automatically from the manifest's unnamed slot entry (`slots: [{ name: '', description: '...'}]`) and the story just seeds a default value for it:
-  `args: { ...args, variant: 'primary', 'deafault-slot': 'Button label' },`
+  `args: { ...args, variant: 'primary', 'default-slot': 'Button label' },`
   It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames. It has no `play` functions. The button has no interaction of its own to demonstrate so its whole contract lives in `cfpb-button/index.spec.js`: variant and type fallbacks, the link form, and disabled state.
 
-- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's interanal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is deive by a real click. Programatic property writes moved to `cfpb-expandable/index.spec.js`
+- `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programmatic property writes moved to `cfpb-expandable/index.spec.js`
 
   It writes a custom `render:` like this:
 
@@ -230,7 +230,7 @@ Each element folder holds three files with seperate jobs:
 | `index.spec.js` | its behavior contract                           | jsdom    |
 | `*.stories.ts`  | what it looks like, plus real user interactions | Chromium |
 
-If a test proves what the component looks like, it belongs in a story. If it proves what a user can do, it belongs in a `play` functions on a story. Everything else goes in `index.spec.js`: attributes, properties, emitted event shape, slots, fallbacks, error paths, matricies of values. Never assert the same thing in both places.
+If a test proves what the component looks like, it belongs in a story. If it proves what a user can do, it belongs in a `play` functions on a story. Everything else goes in `index.spec.js`: attributes, properties, emitted event shape, slots, fallbacks, error paths, matrices of values. Never assert the same thing in both places.
 
 The reason to bother with the split it portability. `index.spec.js` files import the component itself, so if Storybook is ever replaced they keep running untouched. Anything proven only by a `play` functions goes when Storybook goes. Keep that set small.
 
@@ -254,7 +254,7 @@ Do no write test only stories tagged `['!dev', '!autodoc']`. We used that patter
 
 ### Writing a spec
 
-Copy `cfpb-file-upload/index.spec.js` for the minimal case, or `cfpb-button/index.spec.js` if you want a `mount()` helper. Mount the element, wait for it to be defined and rendered, assert agains the shadow root and then clean up.
+Copy `cfpb-file-upload/index.spec.js` for the minimal case, or `cfpb-button/index.spec.js` if you want a `mount()` helper. Mount the element, wait for it to be defined and rendered, assert against the shadow root and then clean up.
 
 ```js
 describe('<cfpb-alert', () => {

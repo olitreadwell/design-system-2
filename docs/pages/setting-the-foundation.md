@@ -216,7 +216,7 @@ description: >-
   Organizational leaders and managers should prioritize assembling teams with members that have a variety of lived experiences. It is a best practice to include and involve people from a range of different social and ethnic backgrounds. 
 
 
-  While this includes individuals of different races, genders, religions, sexual orientations, ages, and national origins, it also includes individuals of different economic, geographic, or educational backgrounds, for example. In a heterogeneous environment, each team member has different knowledge, perspectives, and points of view that help the group make better-informed decisions. Once a heterogenous team has been assembled, the [frames of reference](#frames-of-reference) activity will be useful in identifying the individual and collective biases on the team. 
+  While this includes individuals of different races, genders, religions, sexual orientations, ages, and national origins, it also includes individuals of different economic, geographic, or educational backgrounds, for example. In a heterogeneous environment, each team member has different knowledge, perspectives, and points of view that help the group make better-informed decisions. Once a heterogeneous team has been assembled, the [frames of reference](#frames-of-reference) activity will be useful in identifying the individual and collective biases on the team. 
 
 
   ## Beginning a project
