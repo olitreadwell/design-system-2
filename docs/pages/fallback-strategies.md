@@ -83,7 +83,7 @@ description: >
 
   2. Add in the expected component width within a `<component name>:not(:defined) { … }` CSS rule.
 
-  3. And any media queries if the layout dimenions change across screen sizes.
+  3. And any media queries if the layout dimensions change across screen sizes.
 
   4. Add an `@use` import for the components `skeleton.css` file to the `/elements/base/base.scss` file.
 
@@ -152,7 +152,7 @@ description: >
   ```
 
 
-  Our earlier example then becames:
+  Our earlier example then becomes:
 
 
   ```html

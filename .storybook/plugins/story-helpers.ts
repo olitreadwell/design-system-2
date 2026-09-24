@@ -11,9 +11,9 @@ import { html } from 'lit';
 
 /**
  * Every icon name the DS ships is taken from the SVG filenames, so a new icon
- * shows up in the controls withouth anyone editing a story.
+ * shows up in the controls without anyone editing a story.
  *
- * `import.meta.glob` is resolved by Vite and is realtive to this file, so the path
+ * `import.meta.glob` is resolved by Vite and is relative to this file, so the path
  * is from `.storybook/`.
  */
 export const iconNames: string[] = Object.keys(

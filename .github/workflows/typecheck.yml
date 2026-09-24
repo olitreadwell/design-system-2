@@ -26,6 +26,6 @@ jobs:
         run: yarn typecheck
 
       # The step above regenerates the CEM and types file in place, so a diff here means the
-      # commited CEM is stale. Run `yarn analyze` and commit the result.
+      # committed CEM is stale. Run `yarn analyze` and commit the result.
       - name: Check generated CEM is up to date
         run: git diff --exit-code storybook/custom-elements.json storybook/custom-elements-types.d.ts

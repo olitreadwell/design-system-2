@@ -27,7 +27,7 @@ description: >-
   #### Web components (beta)
 
 
-  We've started creating web component versions of our legacy components. These can be found on the [Elements](https://cfpb.github.io/design-system/components/elements) page within the "Web components (beta)" sub section of [Components](https://cfpb.github.io/design-system/components/). These web components utilize design tokens for color values in the form of platform-agnostic JSON. Style Dictionary translates this JSON into .css custom properties. These tokens become easily parsed and consumed, meaning we could deliver them into Android or iOS formats if desired. 
+  We've started creating web component versions of our legacy components. These can be found on the [Elements](https://cfpb.github.io/design-system/components/reference-for-custom-elements) page within the "Web components (beta)" sub section of [Components](https://cfpb.github.io/design-system/components/). These web components utilize design tokens for color values in the form of platform-agnostic JSON. Style Dictionary translates this JSON into .css custom properties. These tokens become easily parsed and consumed, meaning we could deliver them into Android or iOS formats if desired. 
 
 
   With this move to JSON tokens, we are also centralizing our source of truth by exporting the tokens directly from our [Figma library](https://www.figma.com/community/file/1487539003249310850), enhancing collaboration between design and development. Designers can manage and maintain the tokens in Figma, and developers can directly consume the output.
