@@ -82,7 +82,7 @@
     @include u-grid-column(6);
   }
 
-  // Nested colums don't work yet, so pull the first col back.
+  // Nested columns don't work yet, so pull the first col back.
   .content-first {
     border-left: 0;
   }

@@ -177,7 +177,7 @@ argTypes {
 }
 ```
 
-If a component reflects a boolean attribute (`reflect: true`), prefer asserting against the DOM attribute rather than the JS property so you are checking real rendered state. There is an example of this in `packages/cfpb-design-system/elements/cfpb-expandable/index.spec.js` under `collapsing programatically` which checks `button.getAttribute('aria-expanded')` and `elm.hasAttribute('open')`
+If a component reflects a boolean attribute (`reflect: true`), prefer asserting against the DOM attribute rather than the JS property so you are checking real rendered state. There is an example of this in `packages/cfpb-design-system/elements/cfpb-expandable/index.spec.js` under `collapsing programmatically` which checks `button.getAttribute('aria-expanded')` and `elm.hasAttribute('open')`
 
 This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelCase keys here (`iconLeft, iconRight`) which silently failed to attach the icon-select controls to the real args since `getStorybookHelpers` generates attribute-cased keys.
 
@@ -199,7 +199,7 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
     </cfpb-expandable>`,
   ```
 
-- `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. It shows the split most clearly. The `Default` story's `play` function clickc the button and asserts `item-click` fires in Chromium, while `cfpb-tag-filter/index.spec.js` covers the event's shape (`detail.target`, `bubbles`, `composed`), the async `focus()` method, the `for` label form, and value derivation from slotted text. Same component, no overlapping assertions.
+- `cfpb-tag-filter.stories.ts` - back to auto `template(args)` since it only has a default slot. It shows the split most clearly. The `Default` story's `play` function clicks the button and asserts `item-click` fires in Chromium, while `cfpb-tag-filter/index.spec.js` covers the event's shape (`detail.target`, `bubbles`, `composed`), the async `focus()` method, the `for` label form, and value derivation from slotted text. Same component, no overlapping assertions.
 - `cfpb-tagline.stories.ts` - the minimal case. Single boolean property (`isLarge`, no explicit `attribute:` override so it defaults to the camelCase name), no play functions. Good starting template for the simplest components.
 
 6. ### Recipe: adding a story for a component
@@ -209,7 +209,7 @@ This isn't stylistic. Prior to fixing this, `cfpb-button.stories.ts` used camelC
 - Import `Meta/StoryObj` from `@storybook/web-components`
 - Call `<Component>.init()` at module scope before anything else
 - Call `getStorybookHelpers<xProps>('tag-name', { excludeCategories: ['methods'] })`, importing the `XProps` type from the `storybook/custom-elements-types`
-- Decide between `tempalate(args)` and a custom `render:`. Use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
+- Decide between `template(args)` and a custom `render:`. Use the auto `template` if the component only has a default slot. Write a custom `html` render (like in the expandables story) if it has named slots or needs conditional markup.
 - Set `meta.args/meta.argTypes` using _attribute-cased keys_, not camelCased properties. If you do this wrong it won't error, it just silently no-ops the control or arg
 - Set `meta.component: 'tag-name'` and `tags: ['autodocs]`. This isn't optional. Without `component:` set the auto-generated `Overview` docs page fails to render its canvas and Attributes/Slots/Events table.
 - Add a `play` function only for a real user interaction (like a click or keypress) following the `cfpb-expandable/cfpb-tag-filter` pattern with `fn()` + `userEvent` + `expect` from `storybook/test`. Everything else goes in a spec. See section 8.
