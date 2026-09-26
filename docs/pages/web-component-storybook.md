@@ -104,7 +104,7 @@ variation_groups:
           `excludeCategories: ['methods']` is used in every story file. It drops public methods from the args/controls table since methods aren't bindable Storybook controls.
 
 
-          `setStorybookHlpersConfig({ hideArgsRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
+          `setStorybookHelpersConfig({ hideArgRef: true })` in `preview.js` suppresses the "ref" column the helper would otherwise add to the args table in the UI.
       - variation_is_deprecated: false
         variation_name: JSDoc - what works and what doesn't
         variation_description: >-
@@ -252,7 +252,7 @@ variation_groups:
 
             It also dynamically builds a select control for `icon-left/icon-right` off the actual icon SVG filenames. It has no `play` functions. The button has no interaction of its own to demonstrate so its whole contract lives in `cfpb-button/index.spec.js`: variant and type fallbacks, the link form, and disabled state.
 
-          - `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programatic property writes moved to `cfpb-expandable/index.spec.js`
+          - `cfpb-expandable.stories.ts` can't use the auto `template()` because it needs two _named_ slots. This is the pattern to copy for any component with named slots. It also demonstrates `play` functions exercising the component's 4 custom events using `fn()` spies from `storybook/test` and `userEvent.click`, plus a synthetic-event trick for the CSS transition drive `collapsed` / `expanded` events because the component's internal BaseTransition listens for the Chromium-prefix name first. Those 4 stay in the story because each is derived by a real click. Programmatic property writes moved to `cfpb-expandable/index.spec.js`
 
             It writes a custom `render:` like this:
 
@@ -362,7 +362,7 @@ variation_groups:
           ### Writing a spec
 
 
-          Copy `cfpb-file-upload/index.spec.js` for the minimal case, or `cfpb-button/index.spec.js` if you want a `mount()` helper. Mount the element, wait for it to be defined and rendered, assert agains the shadow root and then clean up.
+          Copy `cfpb-file-upload/index.spec.js` for the minimal case, or `cfpb-button/index.spec.js` if you want a `mount()` helper. Mount the element, wait for it to be defined and rendered, assert against the shadow root and then clean up.
 
 
           ```js

@@ -73,7 +73,7 @@ we use a 0.2% cutoff with this config for the browsers
 that get fed into our build systems.
 
 What this means to the end-user is we've added a level of backward
-compatability for modern features as much as possible. This doesn't
+compatibility for modern features as much as possible. This doesn't
 necessarily mean feature parity. Where it's impossible or impractical to
 implement a modern feature, we fallback to standard practices for that browser.
 For example, we do not deliver interactive scripting for Internet Explorer 8,
@@ -172,12 +172,12 @@ Instructions for developers who've received a new or updated icon from a designe
 
 ## Adding and updating web component JSON design tokens
 
-The web components in the design system use JSON format design tokens that get transformed by Style Dicitonary into css.
+The web components in the design system use JSON format design tokens that get transformed by Style Dictionary into css.
 These tokens are exported from Figma and then saved to the tokens directory in subfolders organized by their usage.
 Meaning, global tokens are in the packages/cfpb-design-system/src/tokens/abstracts directory and any component specific tokens are located
 in their own sub directories inside tokens (e.g. packages/cfpb-design-system/src/tokens/cfpb-button or similar).
 
-Style dicitonary transforms any JSON token it finds in the tokens directory into css files and places them in a directory mirroring the structure
+Style dictionary transforms any JSON token it finds in the tokens directory into css files and places them in a directory mirroring the structure
 it found in tokens to the src/elements directory as sub directories.
 
 1. To add or update a color token's value, find the relevant JSON token file and change the value or create a JSON token file in the
@@ -185,7 +185,7 @@ it found in tokens to the src/elements directory as sub directories.
    - For example,if you wanted to change the value of "pacific" you would go to `tokens/abstracts/custom-props.json` find the
      "pacific" token and then change its $value: #`newval`.
    - If you wanted to add a color token file for cfpb-newcomponent, you would create `tokens/cfpb-newcomponent` directory and then add the JSON
-     token file using the approriate JSON token form.
+     token file using the appropriate JSON token form.
 1. Then either use `yarn start` to build the cobebase and view it in a browser or `yarn tokens` if you would like to simply create
    the .css.
 1. Then the rest of the steps outlined for changing the codebase apply.
@@ -221,7 +221,7 @@ Example of a valid JSON token file structure for our project.
   },
 ```
 
-Figma emits JSON color that adears to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specifc metadata.
+Figma emits JSON color that adheres to the [w3c design token spec](https://www.designtokens.org/tr/drafts/color/#format). Editors can supply only hex values, srgb int or srgb float while ignoring the Figma specific metadata.
 
 ## Storybook for Web Components
 
