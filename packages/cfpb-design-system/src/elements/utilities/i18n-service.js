@@ -45,7 +45,7 @@ export class I18nService extends HTMLElement {
 
       this.#translations = data;
 
-      // Set default lanugage to the first available one, if not already set.
+      // Set default language to the first available one, if not already set.
       const available = this.availableLanguages;
       if (available.length > 0 && !this.#language) {
         this.language = available[0];
