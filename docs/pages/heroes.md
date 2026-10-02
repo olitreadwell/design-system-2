@@ -146,9 +146,9 @@ variation_groups:
 
           | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 
-          | Heading        | H1                                                                          | H2                                                                        | H2                                                                        |
+          | Heading        | H1                                                                          | H1                                                                        | H2                                                                        |
 
-          | Subheading     | Source Sans 3 Regular, 22px/28px                                              | Source Sans 3 Regular, 18px/22px                                            | Source Sans 3 Regular, 18px/22px                                            |
+          | Subheading     | Source Sans 3 Regular, 22px/28px                                              | Source Sans 3 Regular, 22px/28px                                            | Source Sans 3 Regular, 18px/22px                                            |
 
           | Padding        | Top/bottom: 45px, left/right: 30px                                          | All sides: 30px                                                           | Top/bottom: 30px, left/right: 15px                                        |
 

@@ -123,12 +123,7 @@ $hero-desktop-height: 285px;
         padding-bottom: 0;
       }
     }
-  }
-}
 
-// Tablet and below.
-@include respond-to-max($bp-sm-max) {
-  .m-hero {
     &__heading {
       @include heading-2($is-responsive: false);
     }
