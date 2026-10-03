@@ -102,6 +102,6 @@ related_items: >-
 
   * [Text components](/design-system/patterns/info-unit-groups#text-only)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/email-signup-forms)
 last_updated: 2019-10-24T20:28:47.366Z
 ---
