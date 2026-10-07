@@ -21,7 +21,7 @@ description: >-
   #### Legacy components
 
 
-  Our legacy component versions—currently found in the "Components" sub section of [Components](https://cfpb.github.io/design-system/components/)—leverage SCSS mixins, variables, etc., in the form of `$varible-name: value` or `--variable-name: value`. We've used this approach for several years, and it has served us well as it delivers a familiar developer experience. However, this approach requires knowledge of SCSS, is tied to the platform, and is extensive. 
+  Our legacy component versions—currently found in the "Components" sub section of [Components](https://cfpb.github.io/design-system/components/)—leverage SCSS mixins, variables, etc., in the form of `$variable-name: value` or `--variable-name: value`. We've used this approach for several years, and it has served us well as it delivers a familiar developer experience. However, this approach requires knowledge of SCSS, is tied to the platform, and is extensive. 
 
 
   #### Web components (beta)

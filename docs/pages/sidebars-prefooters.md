@@ -22,7 +22,7 @@ variation_groups:
           Standard layout for the main content area and sidebar.
 
 
-          By default `.content__main` and `.content__sidebar` stack vertically. When using the modifiers described below to create columns, the columns will remain stacked for smaller screens and then convert to to columns at `801px`.
+          By default `.content__main` and `.content__sidebar` stack vertically. When using the modifiers described below to create columns, the columns will remain stacked for smaller screens and then convert to columns at `801px`.
 
 
           Inline styling is for demonstration purposes only; do not include it in your markup.
