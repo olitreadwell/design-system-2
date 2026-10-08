@@ -2,6 +2,7 @@ import { html, LitElement, css, unsafeCSS, nothing } from 'lit';
 import { defineComponent } from '../utilities/shared-config';
 import styles from './styles.component.scss?inline';
 import { ref, createRef } from 'lit/directives/ref.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { CfpbIcon } from '../cfpb-icon';
 import { CfpbFormSearchInput } from '../cfpb-form-search-input';
 import { SearchService } from '../utilities/search-service.js';
@@ -350,13 +351,13 @@ export class CfpbSelect extends LitElement {
           <cfpb-form-search-input
             ${ref(this.#input)}
             borderless
-            ?name=${this.name}
-            ?value=${this.value}
-            ?placeholder=${this.placeholder}
+            name=${ifDefined(this.name)}
+            value=${ifDefined(this.value)}
+            placeholder=${ifDefined(this.placeholder)}
             title=${this.title}
-            ?maxlength=${this.maxlength}
-            aria-label=${this.ariaLabelInput}
-            ?validation=${this.validation}
+            maxlength=${ifDefined(this.maxlength)}
+            aria-label-input=${ifDefined(this.ariaLabelInput)}
+            validation=${ifDefined(this.validation)}
             @clear=${this.#onClear}
             @input=${this.#onInput}
             @click=${this.#onClick}
