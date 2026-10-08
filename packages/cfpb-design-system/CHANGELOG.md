@@ -492,7 +492,7 @@ Fixing legacy select component border width in validation error state - ([4526ed
 - Update to SD config to support native Figma JSON export (#2485) - ([48a5c18](https://github.com/cfpb/design-system/commit/48a5c1853dda3e3f73ccfd2c60a93b8478f9c3e1)) - itsmedavep
 - Merge branch 'main' into dependabot/npm_and_yarn/glob-13.0.0 - Ans
 - Re-build assets - ([23dc250](https://github.com/cfpb/design-system/commit/23dc250b00c8c1efc085f957f18325e1447f57a0)) - Ans
-- Updated table scss to do calcuation for mobile table header line height
+- Updated table scss to do calculation for mobile table header line height
 
 This allows us to remove linter precision rule - ([fb38d59](https://github.com/cfpb/design-system/commit/fb38d59560ea112bab525bd91bea063e509cef3f)) - itsmedavep
 - Remove `number-max-precision` stylelint rule - ([9c3a749](https://github.com/cfpb/design-system/commit/9c3a749379daa372ac36359b7e710441376ad073)) - Ans
@@ -580,7 +580,7 @@ This allows us to remove linter precision rule - ([fb38d59](https://github.com/c
 Adds:
 
 style-dictionary.config.js <- transforms from JSON tokens to .css
-build-tokens.yml <- does what the above does on every commit or PR to the repo to ensure edits commited directly to JSON token files produces the .css files we need
+build-tokens.yml <- does what the above does on every commit or PR to the repo to ensure edits committed directly to JSON token files produces the .css files we need
 package.json <- adds a yarn tokens to commands and invokes it as first step in yarn start process
 
 * Adding style-dictionary to package.json and test files
@@ -679,7 +679,7 @@ Updated @use to point at src/elements/abstracts
 
 I did NOT change the utilities import because we are not duplicating that into the web components currently
 Same thing goes for the icons. We currently are not duplicating them into elements so I did not update that import - ([f0f7e53](https://github.com/cfpb/design-system/commit/f0f7e538f662901aed6b25e05ce1ffcd1a054042)) - itsmedavep
-- Rewired import to piont at elements (#2454)
+- Rewired import to point at elements (#2454)
 
 Updated @use imports to point at our JSON translated css files - ([9862c9c](https://github.com/cfpb/design-system/commit/9862c9c8c5bad80ec404c365fd55625da946ef24)) - itsmedavep
 - Rewired cfpb-tag-group to use JSON translated css (#2455)

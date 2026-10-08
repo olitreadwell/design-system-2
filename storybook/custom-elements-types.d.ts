@@ -243,7 +243,7 @@ export type CfpbExpandableProps = {
 
   /** The expandable started expanding. */
   onexpandbegin?: ((e: CustomEvent) => void) | undefined;
-  /** The expandable finshed expanding. */
+  /** The expandable finished expanding. */
   onexpandend?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
   oncollapsebegin?: ((e: CustomEvent) => void) | undefined;
@@ -258,7 +258,7 @@ export type CfpbExpandableSolidJsProps = {
   'prop:isExpanded'?: CfpbExpandable['isExpanded'] | undefined;
   /** The expandable started expanding. */
   'on:expandbegin'?: ((e: CustomEvent) => void) | undefined;
-  /** The expandable finshed expanding. */
+  /** The expandable finished expanding. */
   'on:expandend'?: ((e: CustomEvent) => void) | undefined;
   /** The expandables started collapsing. */
   'on:collapsebegin'?: ((e: CustomEvent) => void) | undefined;
@@ -1126,7 +1126,7 @@ export type CustomElements = {
    * Events that will be emitted by the component.
    *
    * - `expandbegin`: The expandable started expanding.
-   * - `expandend`: The expandable finshed expanding.
+   * - `expandend`: The expandable finished expanding.
    * - `collapsebegin`: The expandables started collapsing.
    * - `collapseend`: The expandables finished collapsing.
    *
@@ -1854,7 +1854,7 @@ export type CustomElementsSolidJs = {
    * Events that will be emitted by the component.
    *
    * - `expandbegin`: The expandable started expanding.
-   * - `expandend`: The expandable finshed expanding.
+   * - `expandend`: The expandable finished expanding.
    * - `collapsebegin`: The expandables started collapsing.
    * - `collapseend`: The expandables finished collapsing.
    *

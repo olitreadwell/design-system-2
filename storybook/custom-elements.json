@@ -648,7 +648,7 @@
               "type": {
                 "text": "CustomEvent"
               },
-              "description": "The expandable finshed expanding."
+              "description": "The expandable finished expanding."
             },
             {
               "name": "collapsebegin",
