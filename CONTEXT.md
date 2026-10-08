@@ -1,5 +1,5 @@
 # cfpb/design-system context
-> refreshed 2026-10-06 | upstream default: main @ 52f8475522ce7f3f3c34ca23603a324c0107656e
+> refreshed 2026-10-08 | upstream default: main @ 9ca9d13983d113518ffa13d88c354ed5ec8ecee5
 
 ## Identity & policies
 - upstream: cfpb/design-system, default branch `main`, primary language SCSS (JS/TS web components, Jekyll docs site). English-first (yes — all docs/UI in English).
@@ -20,7 +20,7 @@
 - areas actively worked: deps bumps, Storybook/web-component testing refactor, Playwright migration, card/alert/expandable components.
 
 ## Issue-area health
-- 61 open issues; mostly component bugs/feature requests (hero responsive, icon centering, file upload, breadcrumb proposal). No obvious trivial-docs issue.
+- 62 open issues; mostly component bugs/feature requests (hero responsive, icon centering, file upload, breadcrumb proposal). No obvious trivial-docs issue.
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - `2026-08-05` self-found docs dead link (process-icons.js moved) — pr-opened-green (fork PR #1, branch docs/fix-process-icons-link-20260804-215245). ~7 other candidate broken links noted for future passes.
@@ -53,3 +53,4 @@
 - `2026-10-01` issue #2673 icons not vertically centred — status: taken (upstream PR #2735 open, AliMahmoudDev).
 - `2026-10-04` self-found: `cfpb-form-search` / `cfpb-select` boolean-binding prop forwarding to `cfpb-form-search-input` — status: attempted (fork PR #33, branch `oli_fix_form_search_input_bindings`).
 - `2026-10-05` issue #2821 text input placeholder descenders clipped (`descent-override: 15%`) — status: attempted (fork PR #34, branch `oli_fix_text_input_clipping`).
+- `2026-10-08` refresh: upstream main advanced 52f8475 -> 9ca9d13983d113518ffa13d88c354ed5ec8ecee5 (2026-10-07, only `packages/cfpb-design-system/dist/index.js` + `cfpb-form-search/styles.component.scss` — no docs overlap). Dedupe re-verified against LIVE fork PR diffs (open #30/#31/#33/#34/#36 + closed #1/#7/#18/#19/#24-#27/#32/#35) = 53 claimed paths. Trivial pass research: free-file sweep (typos-cli + codespell + curl) leaves only cliff.toml tera dead link, 94 generated `..vv` broken compare links in `packages/cfpb-design-system/CHANGELOG.md`, 3 CHANGELOG prose typos (calcuation/commited/piont), `cfpb-expandable/index.js` JSDoc `finshed`, and a dead `jsperf.com/isobject4` comment in `type-checkers.js`. All other hits are false positives (Latin `instructior`, HTML `thead`, gem `rouge`, author `Ans`, commit-hash fragments, valid AU/UK variants).
