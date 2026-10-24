@@ -145,6 +145,6 @@ related_items: >-
 
   * Metadata / Related posts / Related links
 
-  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/email-signup-forms)
 last_updated: 2020-01-13T23:29:43.319Z
 ---

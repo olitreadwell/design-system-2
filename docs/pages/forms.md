@@ -249,6 +249,6 @@ guidelines: >-
   * **Validate fields before the user submits.** Check for errors as someone fills out the form (e.g., using javascript) and provide inline messaging with instructions for how to correct the error. Also consider including affirmative inline validation (such as green checkmarks) for required text fields, especially those that require specific formats or character counts, such as Zip Codes and passwords.
 eyebrow: Forms
 research: This guide on effective forms has been adapted from the guide
-  [Designing transactions](<>) in the [GOV.UK Government Service Design
-  Manual](<>), which is licensed under the [Open Government License v2.0](<>).
+  [Designing transactions](https://www.gov.uk/service-manual/user-centred-design/designing-transactions) in the [GOV.UK Government Service Design
+  Manual](https://www.gov.uk/service-manual), which is licensed under the [Open Government License v2.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).
 ---
