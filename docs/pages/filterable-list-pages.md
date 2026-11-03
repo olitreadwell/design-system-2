@@ -103,8 +103,8 @@ related_items: >-
 
   * Post preview of [document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
 
-  * [Pagination](https://cfpb.github.io/design-system/patterns/pagination)
+  * [Pagination](https://cfpb.github.io/design-system/components/pagination)
 
-  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+  * [Email sign-up form](https://cfpb.github.io/design-system/patterns/email-signup-forms)
 last_updated: 2020-01-13T23:28:26.904Z
 ---

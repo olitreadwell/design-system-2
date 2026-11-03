@@ -146,9 +146,9 @@ variation_groups:
 
           | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 
-          | Heading        | H1                                                                          | H2                                                                        | H2                                                                        |
+          | Heading        | H1                                                                          | H1                                                                        | H2                                                                        |
 
-          | Subheading     | Source Sans 3 Regular, 22px/28px                                              | Source Sans 3 Regular, 18px/22px                                            | Source Sans 3 Regular, 18px/22px                                            |
+          | Subheading     | Source Sans 3 Regular, 22px/28px                                              | Source Sans 3 Regular, 22px/28px                                            | Source Sans 3 Regular, 18px/22px                                            |
 
           | Padding        | Top/bottom: 45px, left/right: 30px                                          | All sides: 30px                                                           | Top/bottom: 30px, left/right: 15px                                        |
 
@@ -614,14 +614,14 @@ variation_groups:
           <style>
               .m-hero__image {
                   background-image:
-                      url('/design-system/images/uploads/jumbo-hero-image.png');
+                      url('/design-system/images/uploads/design_system_50-50_hero_example.png');
                   background-image: -webkit-image-set(
-                      url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                      url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                      url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                   );
                   background-image: image-set(
-                      url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                      url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                      url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                      url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                   );
                   padding-bottom: 41.6666667%;
               }
@@ -629,14 +629,14 @@ variation_groups:
               @media screen and (min-width: 37.5625em) {
                   .m-hero__wrapper {
                       background-image:
-                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                       );
                   }
               }
@@ -654,14 +654,14 @@ variation_groups:
               <style>
                   #example-hero-50-50 .m-hero__image {
                       background-image:
-                          url('/design-system/images/uploads/jumbo-hero-image.png');
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png');
                       background-image: -webkit-image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                       );
                       background-image: image-set(
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                          url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                          url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                       );
                       padding-bottom: 41.6666667%;
                   }
@@ -669,14 +669,14 @@ variation_groups:
                   @media screen and (min-width: 37.5625em) {
                       #example-hero-50-50 .m-hero__wrapper {
                           background-image:
-                              url('/design-system/images/uploads/jumbo-hero-image.png');
+                              url('/design-system/images/uploads/design_system_50-50_hero_example.png');
                           background-image: -webkit-image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                              url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                           );
                           background-image: image-set(
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
-                              url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+                              url('/design-system/images/uploads/design_system_50-50_hero_example.png') 1x,
+                              url('/design-system/images/uploads/design_system_50-50_hero_example.png') 2x
                           );
                       }
                   }
