@@ -101,7 +101,7 @@ variation_groups:
           ```
 
 
-          `excludeCategories: ['methods', 'properties']` is used in every story file. It removes methods from the args/controls table because they are not bindable in Storybook. `properties` is excluded because Web Components favor attrributes. But, also that `wc-toolkit` creates a control for both props and attributes whenever they are named differently (EG `styleAsLink` and `style-as-link`). `template()` binds both of them and that created a bug where using `properties` in Storybook would apply the prop after the attribute so leaving them let a prop with a default overwrite what the story set with the attribute.
+          `excludeCategories: ['methods', 'properties']` is used in every story file. It removes methods from the args/controls table because they are not bindable in Storybook. `properties` is excluded because Web Components favor attributes. But, also that `wc-toolkit` creates a control for both props and attributes whenever they are named differently (EG `styleAsLink` and `style-as-link`). `template()` binds both of them and that created a bug where using `properties` in Storybook would apply the prop after the attribute so leaving them let a prop with a default overwrite what the story set with the attribute.
 
 
           `setStorybookHlpersConfig({ hideArgsRef: true })` in `preview.js` hides the "ref" column the helper that clutters up the Storybook UI.

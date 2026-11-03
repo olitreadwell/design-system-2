@@ -11,7 +11,7 @@ import { FlyoutMenu } from '../../utilities/behavior/flyout-menu';
  * @slot header - The header content for the expandable.
  * @slot content - The content within the expandable.
  * @fires expandbegin - The expandable started expanding.
- * @fires expandend - The expandable finshed expanding.
+ * @fires expandend - The expandable finished expanding.
  * @fires collapsebegin - The expandables started collapsing.
  * @fires collapseend - The expandables finished collapsing.
  * @property {boolean} isExpanded - Whether the expandable is expanded or not.

@@ -121,7 +121,7 @@ variation_groups:
           | Meta header | 500 (Medium)    | 18px          | 0.517                 | 22.5px          | Drops to 16px                     |
 
 
-          \*See [Normalization](<>) to learn why we use font-size-adjust.
+          \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
       - variation_name: Eyebrow heading
         variation_description: >-
           The eyebrow heading is an additional label that can be used to support
@@ -147,7 +147,7 @@ variation_groups:
           | Eyebrow heading | 600 (Semi Bold) | 14px all caps | 0.517                 | 17.5px, 1px letter spacing | No change                         |
 
 
-          \*See [Normalization](<>) to learn why we use font-size-adjust.
+          \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
       - variation_name: Slug heading
         variation_description:
           Slug headings are used to call attention to and lead
@@ -172,7 +172,7 @@ variation_groups:
           | Slug title  | 600 (Semi Bold) | H5 (14px all caps) | 0.517                 | 17.5px, 1px letter spacing | No change                         |
 
 
-          \*See [Normalization](<>) to learn why we use font-size-adjust.
+          \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
     variation_group_description: The heading variations below have specific use cases.
 guidelines: >-
   ### Content

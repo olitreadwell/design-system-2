@@ -76,7 +76,7 @@ variation_groups:
             </button>
           </div>
         variation_description:
-          This component provides a more inconspicous button, which
+          This component provides a more inconspicuous button, which
           stays at the bottom of the summary when expanded.
 eyebrow: Components
 title: Summaries
