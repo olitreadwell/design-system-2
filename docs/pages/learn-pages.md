@@ -112,6 +112,6 @@ related_items: >-
 
   * [Wells](/design-system/patterns/wells)
 
-  * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+  * [Email signup form](https://cfpb.github.io/design-system/patterns/email-signup-forms)
 last_updated: 2020-01-13T23:26:34.507Z
 ---

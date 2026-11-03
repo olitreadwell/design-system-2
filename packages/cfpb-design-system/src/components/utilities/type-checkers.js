@@ -47,7 +47,6 @@ function isDefined(value) {
  * @returns {boolean} True if `value` is an `Object` but not `null`.
  */
 function isObject(value) {
-  // http://jsperf.com/isobject4
   return value !== null && typeof value === 'object';
 }
 

@@ -12,7 +12,7 @@
           "name": "CfpbAlert",
           "slots": [
             {
-              "description": "The main content for the tagline.",
+              "description": "The main explanation and optional list.",
               "name": ""
             }
           ],
@@ -648,7 +648,7 @@
               "type": {
                 "text": "CustomEvent"
               },
-              "description": "The expandable finshed expanding."
+              "description": "The expandable finished expanding."
             },
             {
               "name": "collapsebegin",
@@ -2803,7 +2803,7 @@
           "name": "CfpbListItem",
           "slots": [
             {
-              "description": "The content for the topic tag.",
+              "description": "The content for the list item.",
               "name": ""
             }
           ],
