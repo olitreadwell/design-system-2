@@ -51,11 +51,11 @@ variation_groups:
           <h1 style="font-size:60pt; font-weight:500;
           line-height:66pt">Display</h1>
 
-          <h1 style="font-size:38pt; font-weight:400; line-height:40pt">Heading 1</h1>
+          <h1 style="font-size:38pt; font-weight:500; line-height:42pt">Heading 1</h1>
 
-          <h2 style="font-size:26pt; font-weight:400; line-height:28pt">Heading 2</h2>
+          <h2 style="font-size:24pt; font-weight:400; line-height:28pt">Heading 2</h2>
 
-          <h3 style="font-size: 16pt; font-weight:600; line-height: 18pt">Heading 3</h3>
+          <h3 style="font-size: 16pt; font-weight:500; line-height: 18pt">Heading 3</h3>
 
           <h4 style=font-size:14pt; font-weight:500; line-height:16pt">Heading 4</h4>
 
@@ -68,9 +68,9 @@ variation_groups:
           | **Heading** | **Font weight** | **Font size** | **Line height** |
           | ----------- | --------------- | ------------- | --------------- |
           | **Display** | 500 (Medium)    | 60pt          | 66pt            |
-          | **H1**      | 400 (Regular)   | 38pt          | 40pt            |
-          | **H2**      | 400 (Regular)   | 26pt          | 28pt            |
-          | **H3**      | 600 (Semi Bold) | 16pt          | 18pt            |
+          | **H1**      | 500 (Medium)    | 38pt          | 42pt            |
+          | **H2**      | 400 (Regular)   | 24pt          | 28pt            |
+          | **H3**      | 500 (Medium)    | 16pt          | 18pt            |
           | **H4**      | 500 (Medium)    | 14pt          | 16pt            |
           | **H5**      | 600 (Semi Bold) | 10pt all caps | 12pt            |
           | **H6**      | 500 (Medium)    | 12pt          | 14pt            |

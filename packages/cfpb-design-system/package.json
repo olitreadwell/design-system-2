@@ -1,6 +1,6 @@
 {
   "name": "@cfpb/cfpb-design-system",
-  "version": "5.10.2",
+  "version": "5.10.3",
   "description": "CFPB's UI framework",
   "exports": {
     ".": "./src/index.js",
@@ -38,7 +38,7 @@
   "gitHead": "d9b9862ef0a34a0ca6f4835347ac7f202ed50e3e",
   "type": "module",
   "dependencies": {
-    "@fontsource-variable/source-sans-3": "5.3.0",
+    "@fontsource-variable/source-sans-3": "5.3.1",
     "lit": "3.3.3",
     "tippy.js": "6.3.7"
   }
